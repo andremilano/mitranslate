@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Translate Your Text with Seamless UI</title>
+  </head>
+  <body class="flex justify-center items-center p-3 bg-gray-800 min-h-screen">
+    <div class="induk max-w-2xl bg-white w-full p-10 rounded-lg shadow-lg">
+      <h1 class="flex justify-center pb-4 font-medium text-2xl underline">
+        TRANSLATOR
+      </h1>
+      <div class="wrapper border-2 border-black rounded-lg">
+        <div class="text-input flex border-b-2 border-black">
+          <textarea
+            class="from-text"
+            spellcheck="false"
+            placeholder="Enter Text"
+          ></textarea>
+          <textarea
+            class="to-text border-l-2"
+            spellcheck="false"
+            placeholder="Translation"
+          ></textarea>
+        </div>
+        <ul class="control">
+          <li class="row from">
+            <div class="icons">
+              <i id="from" class="fas fa-volume-up"></i>
+              <i id="from" class="fas fa-copy"></i>
+            </div>
+            <select></select>
+          </li>
+          <li class="exchange">
+            <i class="fas fa-exchange-alt"></i>
+          </li>
+          <li class="row to">
+            <select></select>
+            <div class="icons">
+              <i id="to" class="fas fa-volume-up"></i>
+              <i id="to" class="fas fa-copy"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button class="w-full p-2 bg-slate-500 rounded-md mt-1">
+        Translate Text
+      </button>
+    </div>
+
+    <script src="assets/countries.js"></script>
+    <script src="assets/main.js"></script>
+  </body>
+</html>
