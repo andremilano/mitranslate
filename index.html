@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Translate Your Text with Seamless UI</title>
+  </head>
+  <body>
+    <!-- Background Glowing Orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <div class="induk">
+      <h1><i class="fas fa-language"></i> TRANSLATOR</h1>
+      
+      <div class="wrapper">
+        <!-- Source Panel -->
+        <div class="panel row from">
+          <div class="panel-header">
+            <div class="select-wrapper">
+              <select aria-label="Source Language"></select>
+            </div>
+            <div class="clear-btn" id="clear-source" title="Clear text">
+              <i class="fas fa-times"></i>
+            </div>
+          </div>
+          <div class="text-input">
+            <textarea
+              class="from-text"
+              spellcheck="false"
+              placeholder="Enter Text"
+              maxlength="2000"
+            ></textarea>
+          </div>
+          <div class="panel-footer">
+            <div class="icons">
+              <i id="from" class="fas fa-volume-up" data-tooltip="Speak text"></i>
+              <i id="from" class="fas fa-copy" data-tooltip="Copy text"></i>
+            </div>
+            <div class="counter-text" id="char-counter">0 / 2000</div>
+          </div>
+        </div>
+
+        <!-- Exchange Button Container -->
+        <div class="exchange-container">
+          <div class="exchange">
+            <i class="fas fa-exchange-alt"></i>
+          </div>
+        </div>
+
+        <!-- Target Panel -->
+        <div class="panel row to">
+          <div class="panel-header">
+            <div class="select-wrapper">
+              <select aria-label="Target Language"></select>
+            </div>
+          </div>
+          <div class="text-input">
+            <textarea
+              class="to-text"
+              spellcheck="false"
+              placeholder="Translation"
+              readonly
+            ></textarea>
+          </div>
+          <div class="panel-footer">
+            <div class="icons">
+              <i id="to" class="fas fa-volume-up" data-tooltip="Speak translation"></i>
+              <i id="to" class="fas fa-copy" data-tooltip="Copy translation"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Translate Button -->
+      <div class="translate-btn-container">
+        <button class="translate-btn">
+          <span>Translate Text</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="assets/countries.js"></script>
+    <script src="assets/main.js"></script>
+  </body>
+</html>
